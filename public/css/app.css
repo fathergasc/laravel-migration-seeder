@@ -26,6 +26,7 @@ body {
   padding: 1rem;
   margin: 1.5rem;
   width: calc(20% - 3rem);
+  height: 370px;
   border: 3px solid #032236;
   border-radius: 10px;
   box-shadow: 1px 1px 10px 2px #032236;
