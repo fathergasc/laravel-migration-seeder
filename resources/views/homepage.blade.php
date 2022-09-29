@@ -17,6 +17,12 @@
             <span>A: {{$train->arrival_station}}</span>
             <span>Partenza: {{substr($train->departure_time, 11, 5)}}</span>
             <span>Arrivo: {{substr($train->arrival_time, 11, 5)}}</span>
+            <span>Operatore: {{$train->operator}}</span>
+            <span>Carrozze: {{$train->cars}}</span>
+            @if ($train->on_time == 1) <span>In orario</span> @else <span>In ritardo</span>
+            @endif
+            @if ($train->on_time == 0 && $train->delayed) <span>Cancellato</span>
+            @endif
         </div>
         @endforeach
     </div>
