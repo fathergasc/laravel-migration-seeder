@@ -19,9 +19,9 @@
             <span>Arrivo: {{substr($train->arrival_time, 11, 5)}}</span>
             <span>Operatore: {{$train->operator}}</span>
             <span>Carrozze: {{$train->cars}}</span>
-            @if ($train->on_time == 1) <span>In orario</span> @else <span>In ritardo</span>
+            @if ($train->on_time == 1) <span>In orario</span> @elseif($train->on_time == 0 && $train->cancelled == 0) <span>In ritardo</span>
             @endif
-            @if ($train->on_time == 0 && $train->delayed == 1) <span>Cancellato</span>
+            @if ($train->on_time == 0 && $train->cancelled == 1) <span>Cancellato</span>
             @endif
         </div>
         @endforeach
