@@ -21,7 +21,7 @@
             <span>Carrozze: {{$train->cars}}</span>
             @if ($train->on_time == 1) <span>In orario</span> @else <span>In ritardo</span>
             @endif
-            @if ($train->on_time == 0 && $train->delayed) <span>Cancellato</span>
+            @if ($train->on_time == 0 && $train->delayed == 1) <span>Cancellato</span>
             @endif
         </div>
         @endforeach
